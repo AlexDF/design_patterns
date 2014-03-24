@@ -4,7 +4,15 @@ var mySingleton = (function () {
 	
 	function init() {
 		
-		
+		function getNowTime() {
+			var myDate = new Date();
+			var hours = myDate.getHours();
+			var minutes = myDate.getMinutes();
+			var seconds = myDate.getSeconds();
+			var milliseconds = myDate.getMilliseconds();
+			var now = "Time: " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds;
+			return now;
+		}
 		//function privateMethod() {
 		//	console.log( "I am private" );
 		//}
@@ -18,14 +26,9 @@ var mySingleton = (function () {
 			//},
 			//publicProperty: "I am also public",
 			getCurrentTime: function() {
-				var myDate = new Date();
-				var hours = myDate.getHours();
-				var minutes = myDate.getMinutes();
-				var seconds = myDate.getSeconds();
-				var milliseconds = myDate.getMilliseconds();
-				var now = "Time: " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds;
-				return now;
+				return getNowTime();
 			}
+			
 		};
 	};
 	
@@ -42,11 +45,11 @@ var mySingleton = (function () {
 
 var singleA = mySingleton.getInstance();
 var timeA = singleA.getCurrentTime();
-setTimeout(function() {
+window.setTimeout(function() {
 	var singleB = mySingleton.getInstance();
 	var timeB = singleB.getCurrentTime();
+	console.log("timeA = " + timeA);
+	console.log("timeB = " + timeB);
+	console.log( singleA.getCurrentTime() === singleB.getCurrentTime());
 }, 3000);
 
-console.log("timeA = " + timeA);
-console.log("timeB = " + timeB);
-console.log( singleA.getCurrentTime() === singleB.getCurrentTime());
