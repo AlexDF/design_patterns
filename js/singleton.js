@@ -45,11 +45,13 @@ var mySingleton = (function () {
 
 var singleA = mySingleton.getInstance();
 var timeA = singleA.getCurrentTime();
+$("#singleton_output").append("<p>" + timeA + "</p>");
 window.setTimeout(function() {
 	var singleB = mySingleton.getInstance();
 	var timeB = singleB.getCurrentTime();
 	console.log("timeA = " + timeA);
 	console.log("timeB = " + timeB);
 	console.log( singleA.getCurrentTime() === singleB.getCurrentTime());
+	$("#singleton_output").append("<p>" + timeB + "</p>");
 }, 3000);
 
