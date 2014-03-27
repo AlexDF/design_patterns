@@ -64,16 +64,18 @@ function Player(name, level, maxhealth) {
 // Creating instance of generic player
 
 var warrior = new Player("Simon Belmont", 1, 100);
+$("#decorator_output").append("<p>" + JSON.stringify(warrior) + "</p>");
 
 // Decorating player with warrior-related attributes/abilities
 
 // During game, player finds an iron sword
 warrior.sword = "Iron Sword";
+$("#decorator_output").append("<p>" + JSON.stringify(warrior) + "</p>");
 
 // Player learns a new ability
-warrior.ability.fireball(target) {
+/*warrior.ability.fireball(target) {
 	target.currentHealth -= 50;
-};
+};*/
 
 // Creating decorator function to decorate player instances
 function LevelUp( character ) {
@@ -84,9 +86,10 @@ function LevelUp( character ) {
 LevelUp( warrior );
 console.log( warrior.level );
 console.log( warrior.maxhealth );
+$("#decorator_output").append("<p>" + JSON.stringify(warrior) + "</p>");
 
-
-
+var player2 = new Player("Sylvia", 1, 100);
+$("#decorator_output").append("<p>" + JSON.stringify(player2) + "</p>");
 
 
 
