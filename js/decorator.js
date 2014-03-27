@@ -1,5 +1,5 @@
 // A vehicle constructor
-function Vehicle( vehicleType ) {
+/*function Vehicle( vehicleType ) {
 	// some defaults
 	this.vehicleType = vehicleType || "car";
 	this.model = "default";
@@ -46,11 +46,34 @@ console.log( secondInstance );
 
 // Outputs:
 // { vehicleType: "car", model:default, license: 00000-000 }
+*/
 
+//************** End Example *****************
 
+//************** Begin My Implementation of Decorator Pattern **********************
 
+// Constructor for generic game character
 
+function Player(name, level, maxhealth) {
+	this.name = name;
+	this.level = level;
+	this.maxhealth = maxhealth;
+	this.currentHealth = maxhealth;
+}
 
+// Creating instance of generic player
+
+var warrior = new Player("Simon Belmont", 1, 100);
+
+// Decorating player with warrior-related attributes/abilities
+
+// During game, player finds an iron sword
+warrior.sword = "Iron Sword";
+
+// Player learns a new ability
+warrior.ability.fireball(target) {
+	target.currentHealth -= 50;
+};
 
 
 
