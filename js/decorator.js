@@ -75,8 +75,15 @@ warrior.ability.fireball(target) {
 	target.currentHealth -= 50;
 };
 
+// Creating decorator function to decorate player instances
+function LevelUp( character ) {
+	character.level += 1;
+	character.maxhealth += 50;
+};
 
-
+LevelUp( warrior );
+console.log( warrior.level );
+console.log( warrior.maxhealth );
 
 
 
