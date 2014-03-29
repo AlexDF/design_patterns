@@ -26,9 +26,9 @@
 		return Calculator[methodName] && Calculator[methodName].apply( Calculator, [].slice.call(arguments, 1) );
 	};
 	
-	console.log( Calculator.execute("add", 6, 7) );
-	console.log( Calculator.execute("subtract", 9, 2) );
-	console.log( Calculator.execute("multiply", 12, 12) );
-	console.log( Calculator.execute("divide", 64, 16) );
+	$("#command_output").append("<p>" + Calculator.execute("add", 6, 7) + "</p>" );
+	$("#command_output").append("<p>" + Calculator.execute("subtract", 9, 2) + "</p>" );
+	$("#command_output").append("<p>" + Calculator.execute("multiply", 12, 12) + "</p>" );
+	$("#command_output").append("<p>" + Calculator.execute("divide", 64, 16) + "</p>" );
 	
 })();
