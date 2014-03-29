@@ -1,42 +1,34 @@
 (function(){
-	var CarManager = {
+	var Calculator = {
 		
-		// request information
-		requestInfo: function( model, id ) {
-			return "The information for " + model + " with ID " + id + " is foobar.";
+		// add two numbers
+		add: function( num1, num2 ) {
+			return num1 + num2;
 		},
 		
-		// purchase the car
-		buyVehicle: function( model, id ) {
-			return "You have successfully purchased Item " + id + ", a " + model + ".";
+		// subtract two numbers
+		subtract: function( num1, num2 ) {
+			return num1 - num2;
 		},
 		
-		// arrange a viewing
-		arrangeViewing: function( model, id ) {
-			return "You have successfully booked a viewing of " + model + " ( " + id + " ).";
+		// multiply two numbers
+		multiply: function( num1, num2 ) {
+			return num1 * num2;
+		},
+		
+		// divide two numbers
+		divide: function( num1, num2 ) {
+			return num1 / num2;
 		}
 	};
 	
-	CarManager.execute = function ( name ) {
-		return CarManager[name] && CarManager[name].apply( CarManager, [].slice.call(arguments, 1) );
+	Calculator.execute = function ( methodName ) {
+		return Calculator[methodName] && Calculator[methodName].apply( Calculator, [].slice.call(arguments, 1) );
 	};
 	
-	console.log( CarManager.execute( "arrangeViewing", "Ferrari", "14523" ) );
-	console.log( CarManager.execute( "requestInfo", "Ford Mondeo", "54323" ) );
-	console.log( CarManager.execute( "requestInfo", "Ford Escort", "34232" ) );
-	console.log( CarManager.execute( "buyVehicle", "Ford Escort", "34232" ) );
+	console.log( Calculator.execute("add", 6, 7) );
+	console.log( Calculator.execute("subtract", 9, 2) );
+	console.log( Calculator.execute("multiply", 12, 12) );
+	console.log( Calculator.execute("divide", 64, 16) );
 	
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
