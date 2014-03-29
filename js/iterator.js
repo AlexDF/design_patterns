@@ -40,5 +40,5 @@ function collectionChangeCase(lettercase, myArray) {
     return myCollection;
 } // end function collectionToUpper
 
-console.log(collectionChangeCase("lower", myObj));
-console.log(collectionChangeCase("upper", names));
+$("#iterator_output").append( "<p>" + JSON.stringify( collectionChangeCase("lower", myObj) ) + "</p>" );
+$("#iterator_output").append( "<p>" + collectionChangeCase("upper", names) + "</p>" );
