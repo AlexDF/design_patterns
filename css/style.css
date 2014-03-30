@@ -1,0 +1,34 @@
+header{
+	border-bottom:solid 2px #DDD;
+}
+
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	width: 90%;
+	margin: 0px auto;
+}
+
+div[id*="_output"]{
+	width:90%;
+	background-color: #EEE;
+	padding:0px 0px 0px 15px;
+	border-radius: 5px;
+	overflow:auto;
+}
+
+p{
+	font-size: 110%;
+}
+
+footer{
+	height:35px;
+	border-top:solid 1px #DDD;
+	margin-top:50px;
+}
+
+span{
+	font-weight:bold;
+}
