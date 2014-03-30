@@ -8,19 +8,62 @@
 	</head>
 	
 	<body>
+		<h1>Design Patterns</h1>
+		<p>A design pattern is a reusable program or piece of code that solves a commonly occuring programming problem.</p>
+		
 		<h2>Singleton</h2>
+		<div id="description">
+			<p>A Singleton is a design pattern that only allows a single instance of a class to be created. 
+			Whenever an instance of a Singleton class is needed, if an instance already exists, the existing instance is used.
+			If an instance does not exist, a new instance is created and used.  Singletons are useful because instead of multiple
+			objects being created, a single instance is used, using up less memory.</p>
+			
+			<p>Below is an example of a Singleton used with the Date object to get the current time.  This way, 
+				instead of multiple Date objects being created for this trivial purpose, only a single Date object
+				is used each time.</p>
+			</div>
 		<div id="singleton_output"></div>
 		
+		
 		<h2>Facade</h2>
+		<div id="description">
+			<p>The Facade pattern refers to the encapsulation or concealment of some complex body of code by means of 
+				a simple, easy to use interface, such as a function.  The Facade pattern helps the programmer to focus 
+				more on what needs to be done, instead of how it is being done.</p>
+			<p>In my example below, a simple getEmployeeList() function is used to fetch a list of employees and their information, 
+				and output it to the screen.  Inside the function, more is going on than the user of the function may realize.  The 
+				employee data actually resides inside a JSON file.  The function fetches the JSON file, iterates through each 
+				record, and prints each record to the screen.</p>
+			</div>
 		<div id="employee_list"></div>
 		
 		<h2>Decorator</h2>
+		<div id="description">
+			<p></p>
+			<p></p>
+			</div>
 		<div id="decorator_output"></div>
+		
+		<h2>Command</h2>
+		<div id="description">
+			<p></p>
+			<p></p>
+			</div>
+		<div id="command_output"></div>
+		
+		<h2>Iterator</h2>
+		<div id="description">
+			<p></p>
+			<p></p>
+			</div>
+		<div id="iterator_output"></div>
 		
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="js/singleton.js"></script>
 		<script src="js/facade.js"></script>
 		<script src="js/decorator.js"></script>
+		<script src="js/command.js"></script>
+		<script src="js/iterator.js"></script>
 		<script src="js/constructor.js"></script>
 		
 		<script>getEmployeeList();</script>
