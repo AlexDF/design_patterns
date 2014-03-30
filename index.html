@@ -4,16 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Design Patterns</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	
 	<body>
-		<h1>Design Patterns</h1>
-		<p>A design pattern is a reusable program or piece of code that solves a commonly occuring programming problem.</p>
+		<header><h1>Design Patterns</h1></header>
+		<p>A <span>design pattern</span> is a reusable program or piece of code that solves a commonly occuring programming problem.</p>
 		
 		<h2>Singleton</h2>
 		<div id="description">
-			<p>A Singleton is a design pattern that only allows a single instance of a class to be created. 
+			<p>A <span>Singleton</span> is a design pattern that only allows a single instance of a class to be created. 
 			Whenever an instance of a Singleton class is needed, if an instance already exists, the existing instance is used.
 			If an instance does not exist, a new instance is created and used.  Singletons are useful because instead of multiple
 			objects being created, a single instance is used, using up less memory.</p>
@@ -27,7 +28,7 @@
 		
 		<h2>Facade</h2>
 		<div id="description">
-			<p>The Facade pattern refers to the encapsulation or concealment of some complex body of code by means of 
+			<p>The <span>Facade</span> pattern refers to the encapsulation or concealment of some complex body of code by means of 
 				a simple, easy to use interface, such as a function.  The Facade pattern helps the programmer to focus 
 				more on what needs to be done, instead of how it is being done.</p>
 			<p>In my example below, a simple getEmployeeList() function is used to fetch a list of employees and their information, 
@@ -35,11 +36,11 @@
 				employee data actually resides inside a JSON file.  The function fetches the JSON file, iterates through each 
 				record, and prints each record to the screen.</p>
 			</div>
-		<div id="employee_list"></div>
+		<div id="facade_output"></div>
 		
 		<h2>Decorator</h2>
 		<div id="description">
-			<p>In a Decorator pattern, a developer creates a generic base class containing properties and methods 
+			<p>In a <span>Decorator</span> pattern, a developer creates a generic base class containing properties and methods 
 				that all instance objects of the class will have.  Later, each instance can have different properties 
 				and methods added to them depending on what is needed.  This way, instead of defining a different 
 				class for every possible combination of properties/methods, only one class is utlized and each instance 
@@ -55,7 +56,7 @@
 		
 		<h2>Command</h2>
 		<div id="description">
-			<p>The Command design pattern enables a developer to parameterize method calls so that they don't have to 
+			<p>The <span>Command</span> design pattern enables a developer to parameterize method calls so that they don't have to 
 				invoke the methods directly. The book describes the Command pattern as an encapsulation of method invocation, requests, 
 				or operations into a single object, enabling us to decouple objects invoking the action from the objects which implement them. 
 				Unfortunately I found this latter description vague and the example given in the book did not fully demonstrate exactly what 
@@ -70,7 +71,7 @@
 		
 		<h2>Iterator</h2>
 		<div id="description">
-			<p>An Iterator is a design pattern that allows us to traverse through all of the elements of a collection, such as an array 
+			<p>An <span>Iterator</span> is a design pattern that allows us to traverse through all of the elements of a collection, such as an array 
 				or object, and perform some operation on or with each element.</p>
 			<p>Below, I created my own Iterator that can traverse through the elements/properties of an array/object and, if the value 
 				of an element/property is a string, changes all the letters to uppercase or lowercase.  The first parameter of my function 
@@ -81,13 +82,15 @@
 		
 		<h2>Constructor</h2>
 		<div id="description">
-			<p>The Constructor pattern is a special method that allows the developer to initialize a new instance of an object class.  The 
+			<p>The <span>Constructor</span> pattern is a special method that allows the developer to initialize a new instance of an object class.  The 
 				constructor can accept arguments that can be used to initialize the properties and methods of the new object.</p>
 			<p>I admit, I shamelessly took the easy way out with this one, mainly because I had trouble following along with and implementing 
 				some of the other Creational design patterns.  Anyway, I created my own constructor of an Atom class which can be initialized using 
 				the constructor arguments with the numbers of electrons, protons, and neutrons it has, including the name of the element.</p>
 			</div>
 		<div id="constructor_output"></div>
+		
+		<footer></footer>
 		
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="js/singleton.js"></script>
