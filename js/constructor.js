@@ -5,5 +5,8 @@ function Atom(name, protons, neutrons, electrons) {
 	this.electrons = electrons;
 }
 
-var carbonAtom = new Atom("carbon", 6, 6, 6);
-console.log(carbonAtom.electrons);
+var carbonAtom = new Atom("nitrogen", 7, 7, 7);
+$("#constructor_output").append("<p>" + carbonAtom.element + "</p>");
+$("#constructor_output").append("<p>" + carbonAtom.protons + "</p>");
+$("#constructor_output").append("<p>" + carbonAtom.neutrons + "</p>");
+$("#constructor_output").append("<p>" + carbonAtom.electrons + "</p>");
