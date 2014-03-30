@@ -39,24 +39,55 @@
 		
 		<h2>Decorator</h2>
 		<div id="description">
-			<p></p>
-			<p></p>
+			<p>In a Decorator pattern, a developer creates a generic base class containing properties and methods 
+				that all instance objects of the class will have.  Later, each instance can have different properties 
+				and methods added to them depending on what is needed.  This way, instead of defining a different 
+				class for every possible combination of properties/methods, only one class is utlized and each instance 
+				is expanded with what it needs.</p>
+			<p>In my implementation, I used the situation mentioned in the book of the video game character that 
+				can aquire particular items and abilities throughout the game.  Instead of hard-coding the items/weapons/abilities 
+				into the player class, which would mean I would have to create a different class each time I wanted another player to have 
+				different weapons/abilities, I created a very general base class with properties that every character would have no 
+				matter what.  Later, I tacked on or "decorated" the player instance with new properties and methods corresponding to 
+				newly acquired weapons and abilities.</p>
 			</div>
 		<div id="decorator_output"></div>
 		
 		<h2>Command</h2>
 		<div id="description">
-			<p></p>
-			<p></p>
+			<p>The Command design pattern enables a developer to parameterize method calls so that they don't have to 
+				invoke the methods directly. The book describes the Command pattern as an encapsulation of method invocation, requests, 
+				or operations into a single object, enabling us to decouple objects invoking the action from the objects which implement them. 
+				Unfortunately I found this latter description vague and the example given in the book did not fully demonstrate exactly what 
+				the author means by this. All I see is method calls being passed as arguments to an execute() method, which I still found to be 
+				interesting and useful in itself.</p>
+			<p>In my implementation, I altered the example object given in the book into a simple calculator object.  Here, instead of invoking an 
+				arithmetic method directly by means of Calculator.add(), and the like, the developer uses the Calculator.execute() for all method 
+				calls, passing the method name, and the two numeric operands to be added, subtracted, multiplied, etc, as the first, second, and third 
+				arguments, respectively. </p>
 			</div>
 		<div id="command_output"></div>
 		
 		<h2>Iterator</h2>
 		<div id="description">
-			<p></p>
-			<p></p>
+			<p>An Iterator is a design pattern that allows us to traverse through all of the elements of a collection, such as an array 
+				or object, and perform some operation on or with each element.</p>
+			<p>Below, I created my own Iterator that can traverse through the elements/properties of an array/object and, if the value 
+				of an element/property is a string, changes all the letters to uppercase or lowercase.  The first parameter of my function 
+				specifies the desired letter case and can be set to "upper" or "lower", and the second parameter is the array or object that 
+				has the strings to be converted.</p>
 			</div>
 		<div id="iterator_output"></div>
+		
+		<h2>Constructor</h2>
+		<div id="description">
+			<p>The Constructor pattern is a special method that allows the developer to initialize a new instance of an object class.  The 
+				constructor can accept arguments that can be used to initialize the properties and methods of the new object.</p>
+			<p>I admit, I shamelessly took the easy way out with this one, mainly because I had trouble following along with and implementing 
+				some of the other Creational design patterns.  Anyway, I created my own constructor of an Atom class which can be initialized using 
+				the constructor arguments with the numbers of electrons, protons, and neutrons it has, including the name of the element.</p>
+			</div>
+		<div id="constructor_output"></div>
 		
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="js/singleton.js"></script>
