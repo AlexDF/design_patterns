@@ -6,13 +6,22 @@
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="../qunit/qunit.js"></script>
 		<script src="../js/command.js"></script>
+		<script src="../js/iterator.js"></script>
 		
 		<script>
-			test("Calculator.execute() Output", function() {
+			test("Command - Calculator.execute()", function() {
 				equal(Calculator.execute("add", 3, 5), 8);
 				equal(Calculator.execute("subtract", 3, 5), -2);
 				equal(Calculator.execute("multiply", 3, 5), 15);
 				equal(Calculator.execute("divide", 8, 4), 2);
+			});
+			
+			test("Iterator - collectionChangeCase()", function() {
+				var testArray = ["Raphael", "DONATELLO"];
+				equal(collectionChangeCase("upper", testArray), 
+					"RAPHAEL,DONATELLO");
+				equal(collectionChangeCase("lower", testArray), 
+					"raphael,donatello");
 			});
 		</script>
 	</head>
