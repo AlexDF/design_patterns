@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="../qunit/qunit.css">
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="../qunit/qunit.js"></script>
+		<script src="../js/command.js"></script>
+		
+		<script>
+			test("Calculator.execute() Output", function() {
+				equal(Calculator.execute("add", 3, 5), 8);
+				equal(Calculator.execute("subtract", 3, 5), -2);
+				equal(Calculator.execute("multiply", 3, 5), 15);
+				equal(Calculator.execute("divide", 8, 4), 2);
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="qunit"></div>
+	</body>
+</html>
