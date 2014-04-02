@@ -1,5 +1,4 @@
-(function(){
-	var Calculator = {
+var Calculator = {
 		
 		// add two numbers
 		add: function( num1, num2 ) {
@@ -31,4 +30,3 @@
 	$("#command_output").append("<p>" + Calculator.execute("multiply", 12, 12) + "</p>" );
 	$("#command_output").append("<p>" + Calculator.execute("divide", 64, 16) + "</p>" );
 	
-})();
